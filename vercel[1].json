@@ -1,6 +1,10 @@
 {
-  "version": 2,
-  "rewrites": [
-    { "src": "/(.*)", "dest": "/" }
-  ]
+  "build": {
+    "env": {
+      "NPM_CONFIG_PRODUCTION": "false"
+    }
+  },
+  "installCommand": "npm install",
+  "buildCommand": "npm run build", 
+  "outputDirectory": "build" 
 }
