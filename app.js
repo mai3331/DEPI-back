@@ -17,8 +17,9 @@ const app = express();
 connectDB();
 
 app.use(cors({
-  origin: 'http://localhost:3000',
-  credentials: true, 
+  origin: '*', // Allow all origins
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Specify allowed methods if necessary
+  credentials: true // Allow credentials if needed
 }));
 
 
