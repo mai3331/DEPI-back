@@ -81,8 +81,6 @@ exports.writeReview = async (req, res) => {
         (acc, review) => acc + review.rating,
         0
       );
-      const newAverageRating = parseFloat((totalRatings / movie.reviews.length).toFixed(2));
-
 
       movie.rating = newAverageRating;
       await movie.save();
